@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="functionality Test">
+	<test name="UserManagement Test">
+		<parameter name="validuserid" value="4"></parameter>
+
+		<groups>
+			<run>
+				<include name="valid"></include>
+				<!-- <include name="invalid" /> -->
+
+			</run>
+		</groups>
+
+		<classes>
+			<class name="com.htc.ems.dao.UserDAOImplTest"></class>
+		</classes>
+
+	</test>
+
+</suite>

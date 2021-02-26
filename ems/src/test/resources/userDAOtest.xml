@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="UserInformationUpdateTest">
+<test name="emailUpdationTest">
+<parameter name="vuid" value="1"></parameter>
+<parameter name="vemail" value="hari@htcindia.com"></parameter>
+<classes>
+<class name="com.htc.dao.UserDAOImplTest"></class>
+</classes>
+</test>
+</suite>

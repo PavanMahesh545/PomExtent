@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="functionality Test">
+	<parameter name="validuserid" value="1" /><!-- Applicable on All 
+		the test -->
+	<parameter name="invlaiduserid" value="100" />
+	<test name="UserManagement Test">
+		<parameter name="validuserid" value="2" /><!-- can be used within 
+			this test also it will overide global value provided in suite
+			we Can use only primitive datatype -->
+		<groups>
+			<define name="parameter">
+				<include name="valid" />
+				<include name="invalid" />
+			</define>
+			<define name="onlyvalid">
+				<include name="valid" />
+				<include name="actual" />
+			</define>
+			<run>
+				<include name="parameter" />
+				<!-- <exclude name="Invlaid" /> -->
+			</run>
+		</groups>
+
+		<classes>
+			<class name="com.htc.dao.UserDAOImplTest"></class>
+		</classes>
+
+	</test>
+	<test name="EmployeeManagementTest">
+			
+	</test>
+</suite>
